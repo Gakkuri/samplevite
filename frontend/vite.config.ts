@@ -18,7 +18,7 @@ export default defineConfig({
   server: {
     cors: {
       // the origin you will be accessing via browser
-      origin: "http://127.0.0.1:8000",
+      origin: "https://vite-rhnj.onrender.com",
     },
   },
 });
