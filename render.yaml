@@ -1,0 +1,24 @@
+databases:
+  - name: vitedb
+    plan: free
+    databaseName: vitedb
+    user: viteuser
+
+services:
+  - type: web
+    plan: free
+    name: vite
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn vite.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mysitedb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+      - key: DJANGO_SETTINGS_MODULE
+        value: config.settings.production
