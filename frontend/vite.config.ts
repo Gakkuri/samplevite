@@ -15,10 +15,4 @@ export default defineConfig({
       },
     },
   },
-  server: {
-    cors: {
-      // the origin you will be accessing via browser
-      origin: "https://vite-rhnj.onrender.com",
-    },
-  },
 });

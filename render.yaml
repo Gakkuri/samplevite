@@ -23,6 +23,6 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: config.settings.production
       - key: DJANGO_ADMIN_URL
-        value: https://vite-rhnj.onrender.com/admin/
+        value: admin/
       - key: DJANGO_ALLOWED_HOSTS
         value: vite-rhnj.onrender.com

@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     path: "/about",
     element: (
       <div>
-        <p>This is about us </p>
+        <p>This is about us HELLO! </p>
         <p>
           <a href="/accounts/login/">Click to Sign in</a>
         </p>
